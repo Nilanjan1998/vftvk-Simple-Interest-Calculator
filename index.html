@@ -3,14 +3,53 @@
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     </head>
-    <body>
+    <center>
+      <body>
+      
         <h1>Simple Interest Calculator</h1>
-
-        Amount <input type="number"  id="principal">  <br/>
-        Rate <input type="number"  id="rate">  <br/>
-        No. of Years <input type="number"  id="years">  <br/>
-        Interest : <span id="result"></span><br>
-
-        <button onclick="compute()">Compute</button>
+        <table>
+            <tr>
+                <td>
+                    Amount 
+                </td>
+                <td>
+                    <input type="number"  id="principal"> 
+                </td>
+            </tr>
+             <tr>
+                <td>
+                   Interest Rate
+                </td>
+                <td>
+                    <input type="range"  id="range" class="range" step="0.5" min="1" max="100" onchange="updateTextInput(this.value);"> 
+		    
+                </td>
+		<td>
+			<p id="textInput"></p>
+		</td>
+            </tr>
+	    <tr>
+		<td>No. of Years</td>
+		<td>
+		<select name="years" id="years">
+  		<option value="1">1</option>
+  		<option value="2">2</option>
+  		<option value="3">3</option>
+  		<option value="4">4</option>
+		<option value="5">5</option>
+		</select>
+		</td>
+	    </tr>
+	    
+	    <tr> <td>
+<br><br>
+            <button onclick="compute()">Compute</button>
+		</td>
+	    </tr>
+          </table>
     </body>
+	<p id="finalValue"></p>
+    </center>
+<br><br>
+	<footer>&copy; Copyright 2021 Nilanjan Mukhopadhyay</footer>
 </html>
